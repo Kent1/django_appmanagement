@@ -1,0 +1,11 @@
+# Virtualenv
+bin/
+include/
+lib/
+local/
+
+# Python
+*.pyc
+
+build/
+dist/
