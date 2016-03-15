@@ -9,3 +9,6 @@ local/
 
 build/
 dist/
+
+# DB
+*.sqlite3
