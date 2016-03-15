@@ -1,0 +1,8 @@
+<h1>Applications</h1>
+<ul>
+{% for app in object_list %}
+    <li>{{ app.name }}</li>
+{% empty %}
+    <li>No app yet.</li>
+{% endfor %}
+</ul>
