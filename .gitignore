@@ -12,3 +12,6 @@ dist/
 
 # DB
 *.sqlite3
+
+# Uploaded apps
+uploaded_apps/
