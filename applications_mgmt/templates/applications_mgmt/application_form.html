@@ -1,4 +1,23 @@
-<form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Create" />
-</form>
+{% extends "applications_mgmt/base.html" %}
+
+{% block content %}
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">New Application</span>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+          <div class="coucou">Name : {{ form.name }}</div>
+          <div class="coucou">Description : {{ form.description }}</div>
+          <div class="coucou">Application file : {{ form.application_file }}</div>
+          <div class="coucou">Scope : {{ form.scope }}</div>
+          <input class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" value="Create" />
+      </form>
+    </div>
+  </main>
+</div>
+{% endblock content %}
