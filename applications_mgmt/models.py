@@ -19,7 +19,9 @@ class Application(models.Model):
     description = models.TextField()
     scope = models.IntegerField(choices=Scope.SCOPE, default=Scope.PRIVATE)
     application_file = models.FileField()
+    app_link = models.URLField(blank=True, editable=False)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
+        self.app_link = self.application_file.url
         super(Application, self).save(*args, **kwargs)

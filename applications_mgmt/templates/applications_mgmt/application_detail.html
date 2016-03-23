@@ -21,6 +21,7 @@
       <p>Name : {{ object.name }}</p>
       <p>Description : {{ object.description }}</p>
       <p>Scope : {{ object.get_scope_display }}</p>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="location.href='{{ object.app_link }}';">Download</button>
     </div>
     <div class="div_add_button">
       <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored add_button" onclick="location.href='{% url 'edit' slug=object.slug %}';">
