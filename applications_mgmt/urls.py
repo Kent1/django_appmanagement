@@ -13,5 +13,6 @@ urlpatterns = [
     # /app/app_name/edit
     url(r'^(?P<slug>\w+)/edit/$', ApplicationEditView.as_view(), name='edit'),
     # /uploaded_apps/file
-    url(r'^uploaded_apps/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.MEDIA_ROOT, 'show_indexes': False}),
+    url(r'^uploaded_apps/(?P<path>.*)$', 'django.views.static.serve',
+        {'document_root': settings.MEDIA_ROOT, 'show_indexes': False}),
 ]

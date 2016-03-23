@@ -2,10 +2,12 @@ from django.views.generic import CreateView, ListView, UpdateView, DetailView
 from django.core.urlresolvers import reverse_lazy
 from .models import Application, Scope
 
+
 class ApplicationCreateView(CreateView):
     model = Application
     fields = ['name', 'description', 'application_file', 'scope']
     success_url = reverse_lazy('list')
+
 
 class ApplicationListView(ListView):
     model = Application
@@ -20,8 +22,10 @@ class ApplicationListView(ListView):
             return Application.objects.filter(scope=Scope.PRIVATE)
         return queryset
 
+
 class ApplicationDetailView(DetailView):
     model = Application
+
 
 class ApplicationEditView(UpdateView):
     model = Application

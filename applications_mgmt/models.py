@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.template.defaultfilters import slugify
 
+
 class Scope:
 
     PUBLIC = 0
@@ -12,6 +13,7 @@ class Scope:
         (PUBLIC, 'Public'),
         (PRIVATE, 'Private'),
     )
+
 
 class Application(models.Model):
     name = models.CharField(max_length=40)
