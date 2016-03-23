@@ -20,7 +20,7 @@
     <div class="page-content">
       <p>Name : {{ object.name }}</p>
       <p>Description : {{ object.description }}</p>
-      <p>Scope : {{ object.get_scope_display }}</p
+      <p>Scope : {{ object.get_scope_display }}</p>
     </div>
     <div class="div_add_button">
       <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored add_button" onclick="location.href='{% url 'edit' slug=object.slug %}';">
